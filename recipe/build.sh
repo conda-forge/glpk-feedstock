@@ -14,6 +14,7 @@ fi
 
 ./configure --prefix=$PREFIX --with-gmp
 
+
 make
 make check
 make install
