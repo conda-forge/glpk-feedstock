@@ -26,6 +26,8 @@ requirements:
     - gmp      [not win]
 
 test:
+  requires:
+    - python
   files:
     - test.c
     - setup.py
