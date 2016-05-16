@@ -18,6 +18,7 @@ build:
 
 requirements:
   build:
+    - python   [win]
     - gmp      [not win]
 
   run:
