@@ -5,7 +5,7 @@ Home: https://www.gnu.org/software/glpk/
 
 Package license: GNU General Public License v3
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: GNU Linear Programming Kit
 
@@ -69,9 +69,15 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/glpk-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/glpk-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/glpk-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/glpk-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/glpk-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/glpk-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glpk/badges/version.svg)](https://anaconda.org/conda-forge/glpk)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glpk/badges/downloads.svg)](https://anaconda.org/conda-forge/glpk)
 
 
 Updating glpk-feedstock
