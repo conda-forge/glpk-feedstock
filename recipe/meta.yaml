@@ -11,19 +11,20 @@ source:
 
 build:
    number: 0
+
+   {% set VC_VERSION = os.environ.get('VC_VERSION', '15.0') %}
+   msvc_compiler: {{ VC_VERSION }}
    features:
-     - vc9      [win and py27]
-     - vc10     [win and py34]
-     - vc14     [win and py35]
+     - vc{{ VC_VERSION.split('.')[0] }}  # [win]
 
 requirements:
   build:
-    - gmp      [not win]
+    - vc  # [win]
+    - gmp  #[not win]
 
   run:
-    # python is a Windows run dependency in order to get the correct vc feature
-    - python   [win]
-    - gmp      [not win]
+    - vc {{ VC_VERSION }}  # [win]
+    - gmp  # [not win]
 
 test:
   requires:
