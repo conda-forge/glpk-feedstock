@@ -44,7 +44,7 @@ test:
     - glpsol --mps plan.mps
 
     # test python extension using cython
-    - python setup.py test
+    - python setup.py develop test
 
     # test shared library using python ctypes module
     - python test_ctypes.py
