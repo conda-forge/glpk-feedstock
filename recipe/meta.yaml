@@ -49,8 +49,8 @@ test:
     # test shared library using python ctypes module
     - python test_ctypes.py
 
-    - test -f ${PREFIX}/lib/libglpk.a        # [unix]
-    - test -f ${PREFIX}/lib/libglpk.so       # [unix]
+    - test -f ${PREFIX}/lib/libglpk.a        # [linux]
+    - test -f ${PREFIX}/lib/libglpk.so       # [linux]
     # static library not available on os x
     - test -f ${PREFIX}/lib/libglpk.dylib    # [osx]
 
