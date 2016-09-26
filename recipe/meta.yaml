@@ -38,6 +38,7 @@ test:
   commands:
     - glpsol --mps plan.mps
     - python setup.py test
+    - python test_ctypes.py
 
 about:
   home: https://www.gnu.org/software/glpk/
