@@ -8,10 +8,10 @@ if sys.platform == "win32":
     lib_path = os.path.join(sys.prefix, "Library", "bin", lib_name)
 elif sys.platform == "darwin":
     lib_name = "libglpk.dylib"
-    lib_path = find_library(lib_name)
+    lib_path = os.path.join(sys.prefix, "lib", lib_name)
 else:
     lib_name = "libglpk.so"
-    lib_path = find_library(lib_name)
+    lib_path = os.path.join(sys.prefix, "lib", lib_name)
 
 if not os.path.exists(lib_path):
     raise RuntimeError("Shared library not found at: {}".format(lib_path))
