@@ -34,6 +34,7 @@ test:
     - setup.py
     - spam.c
     - plan.mps
+    - test_ctypes.py
 
   commands:
     - glpsol --mps plan.mps
