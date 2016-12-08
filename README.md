@@ -15,6 +15,18 @@ other related problems. It is a set of routines written in ANSI C and
 organized in the form of a callable library.
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/glpk-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/glpk-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/glpk-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/glpk-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/glpk-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/glpk-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glpk/badges/version.svg)](https://anaconda.org/conda-forge/glpk)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glpk/badges/downloads.svg)](https://anaconda.org/conda-forge/glpk)
+
 Installing glpk
 ===============
 
@@ -35,7 +47,6 @@ It is possible to list all of the versions of `glpk` available on your platform 
 ```
 conda search glpk --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -71,18 +82,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/glpk-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/glpk-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/glpk-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/glpk-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/glpk-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/glpk-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glpk/badges/version.svg)](https://anaconda.org/conda-forge/glpk)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glpk/badges/downloads.svg)](https://anaconda.org/conda-forge/glpk)
 
 
 Updating glpk-feedstock
