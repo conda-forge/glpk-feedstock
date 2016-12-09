@@ -3,7 +3,7 @@ About glpk
 
 Home: https://www.gnu.org/software/glpk/
 
-Package license: GNU General Public License v3
+Package license: GPL3
 
 Feedstock license: BSD 3-Clause
 
