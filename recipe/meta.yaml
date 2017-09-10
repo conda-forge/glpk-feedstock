@@ -22,10 +22,10 @@ requirements:
   build:
     - toolchain
     - python      # [win]
-    - gmp         # [not win]
+    - gmp 6.1.*   # [not win]
 
   run:
-    - gmp         # [not win]
+    - gmp 6.1.*   # [not win]
 
 test:
   requires:
