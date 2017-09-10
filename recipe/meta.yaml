@@ -29,6 +29,7 @@ requirements:
 
 test:
   requires:
+    - toolchain
     - python
     - setuptools
   files:
