@@ -20,13 +20,14 @@ build:
 
 requirements:
   build:
-    - python  # [win]
-    - gmp     # [not win]
+    - toolchain
+    - python      # [win]
+    - gmp         # [not win]
 
   run:
     # python is a Windows run dependency in order to get the correct vc feature
-    - python  # [win]
-    - gmp     # [not win]
+    - python      # [win]
+    - gmp         # [not win]
 
 test:
   requires:
