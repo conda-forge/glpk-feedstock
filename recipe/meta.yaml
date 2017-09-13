@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-   number: 0
+   number: 1
    features:
      - vc9   # [win and py27]
      - vc10  # [win and py34]
@@ -20,16 +20,16 @@ build:
 
 requirements:
   build:
-    - python  # [win]
-    - gmp     # [not win]
+    - toolchain
+    - python      # [win]
+    - gmp 6.1.*   # [not win]
 
   run:
-    # python is a Windows run dependency in order to get the correct vc feature
-    - python  # [win]
-    - gmp     # [not win]
+    - gmp 6.1.*   # [not win]
 
 test:
   requires:
+    - toolchain
     - python
     - setuptools
   files:

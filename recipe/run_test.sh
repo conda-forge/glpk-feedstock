@@ -1,5 +1,13 @@
-cc -I $PREFIX/include -L $PREFIX/lib test.c -lglpk -o test.out
-# Required on OS X to resolve @rpath/./libglpk.40.dylib
-# If this was a real program use install_name_tool to fix the linkage
-export LD_LIBRARY_PATH=$PREFIX/lib
+export CFLAGS="${CFLAGS} -I${PREFIX}/include -L${PREFIX}/lib"
+
+if [ "$(uname)" == "Darwin" ];
+then
+    export LDFLAGS="${LDFLAGS} -Wl,-rpath,${PREFIX}/lib"
+elif [ "$(uname)" == "Linux" ];
+then
+    export LDFLAGS="${LDFLAGS} -Wl,-rpath=${PREFIX}/lib"
+fi
+
+cc ${CFLAGS} ${LDFLAGS} test.c -lglpk -o test.out
+
 ./test.out
