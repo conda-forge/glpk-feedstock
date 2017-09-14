@@ -1,5 +1,6 @@
 {% set name = "glpk" %}
 {% set version = "4.61" %}
+{% set build = 0 %}
 {% set sha256 = "9866de41777782d4ce21da11b88573b66bb7858574f89c28be6967ac22dfaba9" %}
 
 package:
@@ -12,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-   number: 1
+   number: {{ build }}
    features:
      - vc9   # [win and py27]
      - vc10  # [win and py34]
