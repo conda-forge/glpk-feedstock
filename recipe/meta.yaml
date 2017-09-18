@@ -1,7 +1,7 @@
 {% set name = "glpk" %}
-{% set version = "4.62" %}
+{% set version = "4.63" %}
 {% set build = 0 %}
-{% set sha256 = "096e4be3f83878ccf70e1fdb62ad1c178715ef8c0d244254c29e2f9f0c1afa70" %}
+{% set sha256 = "914d27f1a51c2bf4a51f1bd4a507f875fcca99db7b219380b836a25b29b3e7f6" %}
 
 package:
   name: {{ name|lower }}
