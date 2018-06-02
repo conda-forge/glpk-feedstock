@@ -11,6 +11,10 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: http://ftp.gnu.org/gnu/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    # https://lists.nongnu.org/archive/html/bug-glpk/2018-03/msg00000.html
+    # patch will be in next release
+    - remove_unnecessary_warning.diff
 
 build:
    number: {{ build }}
