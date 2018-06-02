@@ -1,6 +1,6 @@
 {% set name = "glpk" %}
 {% set version = "4.65" %}
-{% set build = 0 %}
+{% set build = 1 %}
 {% set sha256 = "4281e29b628864dfe48d393a7bedd781e5b475387c20d8b0158f329994721a10" %}
 
 package:
@@ -13,22 +13,16 @@ source:
   sha256: {{ sha256 }}
 
 build:
-   skip: true  # [win and py35]
    number: {{ build }}
-   features:
-     - vc9     # [win and py27]
-     - vc10    # [win and py34]
-     - vc14    # [win and py35]
-     - vc14    # [win and py36]
 
 requirements:
   build:
-    - toolchain
-    - python      # [win]
-    - gmp 6.1.*   # [not win]
+    - {{ compiler('c') }}
+  host:
+    - gmp         # [not win]
 
   run:
-    - gmp 6.1.*   # [not win]
+    - gmp         # [not win]
 
 test:
   requires:
