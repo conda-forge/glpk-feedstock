@@ -18,14 +18,16 @@ organized in the form of a callable library.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/glpk-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/glpk-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/glpk-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/glpk-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/glpk-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/glpk-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/glpk-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/glpk-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/glpk-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/glpk-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/glpk-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/glpk-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glpk/badges/version.svg)](https://anaconda.org/conda-forge/glpk)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glpk/badges/downloads.svg)](https://anaconda.org/conda-forge/glpk)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-glpk-green.svg)](https://anaconda.org/conda-forge/glpk) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/glpk.svg)](https://anaconda.org/conda-forge/glpk) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/glpk.svg)](https://anaconda.org/conda-forge/glpk) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/glpk.svg)](https://anaconda.org/conda-forge/glpk) |
 
 Installing glpk
 ===============
