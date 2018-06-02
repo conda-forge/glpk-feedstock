@@ -5,11 +5,10 @@ gmp:
 pin_run_as_build:
   gmp:
     max_pin: x
-  python:
-    min_pin: x.x
-    max_pin: x.x
-python:
-- '3.6'
+  vc:
+    max_pin: x
+vc:
+- '14'
 zip_keys:
-- - python
+- - vc
   - c_compiler

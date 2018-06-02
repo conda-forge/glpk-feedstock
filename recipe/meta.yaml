@@ -30,8 +30,9 @@ requirements:
 
 test:
   requires:
-    - toolchain
-    - python
+    - {{ compiler('c') }}
+    - python 2.7            # [win and vc<14]
+    - python 3.6            # [not (win and vc<14)]
     - setuptools
   files:
     - test.c

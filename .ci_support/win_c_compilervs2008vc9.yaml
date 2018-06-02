@@ -1,15 +1,14 @@
 c_compiler:
-- vs2015
+- vs2008
 gmp:
 - '6'
 pin_run_as_build:
   gmp:
     max_pin: x
-  python:
-    min_pin: x.x
-    max_pin: x.x
-python:
-- '3.5'
+  vc:
+    max_pin: x
+vc:
+- '9'
 zip_keys:
-- - python
+- - vc
   - c_compiler
