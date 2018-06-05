@@ -1,6 +1,6 @@
 {% set name = "glpk" %}
 {% set version = "4.65" %}
-{% set build = 0 %}
+{% set build = 1 %}
 {% set sha256 = "4281e29b628864dfe48d393a7bedd781e5b475387c20d8b0158f329994721a10" %}
 
 package:
@@ -11,29 +11,28 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: http://ftp.gnu.org/gnu/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    # https://lists.nongnu.org/archive/html/bug-glpk/2018-03/msg00000.html
+    # patch will be in next release
+    - remove_unnecessary_warning.diff
 
 build:
-   skip: true  # [win and py35]
    number: {{ build }}
-   features:
-     - vc9     # [win and py27]
-     - vc10    # [win and py34]
-     - vc14    # [win and py35]
-     - vc14    # [win and py36]
 
 requirements:
   build:
-    - toolchain
-    - python      # [win]
-    - gmp 6.1.*   # [not win]
+    - {{ compiler('c') }}
+  host:
+    - gmp         # [not win]
 
   run:
-    - gmp 6.1.*   # [not win]
+    - gmp         # [not win]
 
 test:
   requires:
-    - toolchain
-    - python
+    - {{ compiler('c') }}
+    - python 2.7            # [win and vc<14]
+    - python 3.6            # [not (win and vc<14)]
     - setuptools
   files:
     - test.c
