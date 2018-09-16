@@ -8,6 +8,6 @@ then
     export LDFLAGS="${LDFLAGS} -Wl,-rpath=${PREFIX}/lib"
 fi
 
-cc ${CFLAGS} ${LDFLAGS} test.c -lglpk -o test.out
+eval "${CC} ${CFLAGS} ${LDFLAGS} test.c -lglpk -o test.out"
 
 ./test.out
