@@ -11,6 +11,8 @@ then
     export LDFLAGS="${LDFLAGS} -Wl,-rpath=${PREFIX}/lib"
 fi
 
+cp ${RECIPE_DIR}/config.guess .
+
 ./configure --prefix="${PREFIX}" --with-gmp
 
 make
