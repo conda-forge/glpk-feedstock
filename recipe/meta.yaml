@@ -22,19 +22,16 @@ build:
 requirements:
   build:
     - libtool  # [unix]
+    - make
     - {{ compiler('c') }}
   host:
-    - make
     - gmp         # [not win]
-
   run:
     - gmp         # [not win]
 
 test:
   requires:
     - {{ compiler('c') }}
-    - python 2.7            # [win and vc<14]
-    - python 3.6            # [not (win and vc<14)]
     - setuptools
   files:
     - test.c
@@ -60,7 +57,7 @@ test:
 
 about:
   home: https://www.gnu.org/software/glpk/
-  license: GPL3
+  license: GPL-3.0-or-later
   summary: GNU Linear Programming Kit
   description: |
     The GLPK (GNU Linear Programming Kit) package is intended for solving
