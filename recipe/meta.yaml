@@ -33,10 +33,11 @@ test:
   requires:
     - {{ compiler('c') }}
     - setuptools
+    - cython
   files:
     - test.c
     - setup.py
-    - spam.c
+    - spam.pyx
     - plan.mps
     - test_ctypes.py
 
@@ -45,6 +46,7 @@ test:
     - glpsol --mps plan.mps
 
     # test python extension using cython
+    - cython spam.pyx
     - python setup.py develop test
 
     # test shared library using python ctypes module
