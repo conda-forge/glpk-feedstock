@@ -1,6 +1,6 @@
 {% set name = "glpk" %}
 {% set version = "4.65" %}
-{% set build = 1002 %}
+{% set build = 1003 %}
 {% set sha256 = "4281e29b628864dfe48d393a7bedd781e5b475387c20d8b0158f329994721a10" %}
 
 package:
@@ -21,24 +21,23 @@ build:
 
 requirements:
   build:
+    - libtool  # [unix]
+    - make
     - {{ compiler('c') }}
   host:
-    - make
     - gmp         # [not win]
-
   run:
     - gmp         # [not win]
 
 test:
   requires:
     - {{ compiler('c') }}
-    - python 2.7            # [win and vc<14]
-    - python 3.6            # [not (win and vc<14)]
     - setuptools
+    - cython
   files:
     - test.c
     - setup.py
-    - spam.c
+    - spam.pyx
     - plan.mps
     - test_ctypes.py
 
@@ -47,6 +46,7 @@ test:
     - glpsol --mps plan.mps
 
     # test python extension using cython
+    - cython spam.pyx
     - python setup.py develop test
 
     # test shared library using python ctypes module
@@ -59,7 +59,11 @@ test:
 
 about:
   home: https://www.gnu.org/software/glpk/
-  license: GPL3
+  license: GPL-3.0-or-later
+  license_file:
+    - COPYING
+    # this is where the copyright statements are
+    - README
   summary: GNU Linear Programming Kit
   description: |
     The GLPK (GNU Linear Programming Kit) package is intended for solving
@@ -73,3 +77,4 @@ extra:
     - aebrahim
     - jakirkham
     - snorfalorpagus
+    - isuruf
