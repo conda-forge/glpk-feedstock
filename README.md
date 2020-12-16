@@ -3,7 +3,7 @@ About glpk
 
 Home: https://www.gnu.org/software/glpk/
 
-Package license: GPL3
+Package license: GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/glpk-feedstock/blob/master/LICENSE.txt)
 
@@ -189,6 +189,7 @@ Feedstock Maintainers
 =====================
 
 * [@aebrahim](https://github.com/aebrahim/)
+* [@isuruf](https://github.com/isuruf/)
 * [@jakirkham](https://github.com/jakirkham/)
 * [@jjhelmus](https://github.com/jjhelmus/)
 * [@snorfalorpagus](https://github.com/snorfalorpagus/)
