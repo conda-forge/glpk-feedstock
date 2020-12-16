@@ -1,7 +1,7 @@
 {% set name = "glpk" %}
-{% set version = "4.65" %}
-{% set build = 1003 %}
-{% set sha256 = "4281e29b628864dfe48d393a7bedd781e5b475387c20d8b0158f329994721a10" %}
+{% set version = "5.0" %}
+{% set build = 0 %}
+{% set sha256 = "4a1013eebb50f728fc601bdd833b0b2870333c3b3e5a816eeba921d95bec6f15" %}
 
 package:
   name: {{ name|lower }}
@@ -17,7 +17,7 @@ source:
     - remove_unnecessary_warning.diff
 
 build:
-   number: {{ build }}
+  number: {{ build }}
 
 requirements:
   build:
