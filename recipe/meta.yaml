@@ -10,6 +10,9 @@ package:
 source:
   url: http://ftp.gnu.org/gnu/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    # glp_netgen_prob was removed in 5.0, but it wasn't removed from .def file
+    - glp_netgen_prob.diff
 
 build:
   number: {{ build }}
