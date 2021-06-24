@@ -16,6 +16,8 @@ source:
 
 build:
   number: {{ build }}
+  run_exports:
+    - {{ pin_subpackage("glpk") }}
 
 requirements:
   build:
@@ -71,7 +73,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - aebrahim
     - jakirkham
     - snorfalorpagus
     - isuruf
