@@ -1,23 +1,23 @@
 {% set name = "glpk" %}
-{% set version = "4.65" %}
-{% set build = 1004 %}
-{% set sha256 = "4281e29b628864dfe48d393a7bedd781e5b475387c20d8b0158f329994721a10" %}
+{% set version = "5.0" %}
+{% set build = 0 %}
+{% set sha256 = "4a1013eebb50f728fc601bdd833b0b2870333c3b3e5a816eeba921d95bec6f15" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: http://ftp.gnu.org/gnu/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    # https://lists.nongnu.org/archive/html/bug-glpk/2018-03/msg00000.html
-    # patch will be in next release
-    - remove_unnecessary_warning.diff
+    # glp_netgen_prob was removed in 5.0, but it wasn't removed from .def file
+    - glp_netgen_prob.diff
 
 build:
-   number: {{ build }}
+  number: {{ build }}
+  run_exports:
+    - {{ pin_subpackage("glpk") }}
 
 requirements:
   build:
@@ -73,7 +73,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - aebrahim
     - jakirkham
     - snorfalorpagus
     - isuruf

@@ -1,0 +1,10 @@
+--- w64/glpk_5_0.def.bak	2021-05-30 15:48:41.735262757 -0500
++++ w64/glpk_5_0.def	2021-05-30 15:48:46.671289320 -0500
+@@ -224,7 +224,6 @@
+ glp_read_ccdata
+ glp_write_ccdata
+ glp_netgen
+-glp_netgen_prob
+ glp_gridgen
+ glp_rmfgen
+ glp_weak_comp
